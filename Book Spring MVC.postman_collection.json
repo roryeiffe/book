@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "14568584-f9a7-483c-8781-9c5b19feb35e",
+		"name": "Book Spring MVC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Create Cart",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Add Book To Cart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\": 4,\r\n    \"cartId\": 19\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9001/cart/add",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"cart",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Books in Cart",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Post Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"book\",\r\n    \"author\": \"Anne Rice\",\r\n    \"description\": \"description\",\r\n    \"year\": 2018\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9001/books/add",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"books",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9001/books/get",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"books",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9001/books/get/5",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"books",
+								"get",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"new book\",\r\n    \"author\": \"new author\",\r\n    \"description\": \"new description\",\r\n    \"year\": 2002\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9001/books/update/6",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"books",
+								"update",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9001/books/delete/9",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"books",
+								"delete",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book Special",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9001/books/get/special?flag=old",
+							"host": [
+								"localhost"
+							],
+							"port": "9001",
+							"path": [
+								"books",
+								"get",
+								"special"
+							],
+							"query": [
+								{
+									"key": "flag",
+									"value": "old"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
