@@ -20,6 +20,11 @@ public class BookController {
     @Autowired
     BookService bookService;
 
+    @GetMapping("/test")
+    public String test() {
+        return "Hello World";
+    }
+
     // @PostMapping("/add") different syntax for the same thing
     @RequestMapping(value = "", method = RequestMethod.POST)
     // take the book object in the request body and pass it in as a parameter to this method:
