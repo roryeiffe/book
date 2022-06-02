@@ -7,7 +7,7 @@ phases:
   post_build:
     commands:
       - mvn package
-      - mv target/book.war book.war
+      - mv target/book-0.0.1-SNAPSHOT.jar book.war
 artifacts:
   files:
     - book.war
