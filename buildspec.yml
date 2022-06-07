@@ -7,8 +7,8 @@ phases:
   post_build:
     commands:
       - mvn package
-      - mv target/book-0.0.1-SNAPSHOT.war book.war
+      - mv target/book-0.0.1-SNAPSHOT.war ROOT.war
 artifacts:
   files:
-    - book.war
+    - ROOT.war
     - .ebextensions/**/*
