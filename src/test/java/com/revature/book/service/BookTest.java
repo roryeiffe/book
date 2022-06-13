@@ -7,18 +7,28 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.annotation.DirtiesContext;
 
 import java.util.List;
 
 @SpringBootTest
+@DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
 public class BookTest {
 
     @Autowired
     BookService bookService;
 
-    @Test
-    public void testGetBook() {
-//        List<Book> books = bookService.get_all_books();
-//        Assertions.assertEquals("Book(id=44, name=, author=, description=, year=0)", books.get(0).toString());
-    }
+//    @Test
+//    public void addBook() {
+//        Book book = new Book("name 1", "author 1", "description 1", 2000);
+//        bookService.add_book(book);
+//        Assertions.assertEquals(1, book.getId());
+//    }
+//
+//    @Test
+//    public void addBook2() {
+//        Book book = new Book("name 1", "author 1", "description 1", 2000);
+//        bookService.add_book(book);
+//        Assertions.assertEquals(1, book.getId());
+//    }
 }
